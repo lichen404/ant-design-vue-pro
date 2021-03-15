@@ -9,7 +9,7 @@
         v-if="navLayout === 'left'"
       >
         <div class="logo">Ant Design Vue Pro</div>
-        <SideMenu />
+        <SideMenu :theme="navTheme" />
       </a-layout-sider>
       <a-layout>
         <a-layout-header style="background: #fff; padding: 0">
