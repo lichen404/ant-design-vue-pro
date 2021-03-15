@@ -11,8 +11,14 @@
         v-if="!item.children"
         :key="item.path"
         @click="
-          () =>
-            parent.$router.push({ path: item.path, query: parent.$route.query })
+          () => {
+            if (item.path !== parent.$route.path) {
+              parent.$router.push({
+                path: item.path,
+                query: parent.$route.query
+              });
+            }
+          }
         "
       >
         <a-icon v-if="item.meta.icon" :type="item.meta.icon" />
