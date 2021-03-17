@@ -1,11 +1,9 @@
 <template>
-  <div>StepForm</div>
+  <router-view />
 </template>
 
 <script>
-export default {
-  name: "StepForm"
-};
+export default {};
 </script>
 
 <style scoped></style>
