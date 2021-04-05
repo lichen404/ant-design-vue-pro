@@ -6,15 +6,7 @@
     :theme="theme"
   >
     <template v-for="item in menuData">
-      <a-menu-item
-        v-if="!item.children"
-        :key="item.path"
-        @click="$router.push({ path: item.path, query: $route.query })"
-      >
-        <a-icon v-if="item.meta.icon" :type="item.meta.icon" />
-        <span>{{ item.meta.title }}</span>
-      </a-menu-item>
-      <sub-menu v-else :menu-info="item" :key="item.path" />
+      <sub-menu :menu-info="item" :key="item.path" />
     </template>
   </a-menu>
 </template>
