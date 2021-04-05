@@ -4,7 +4,7 @@ import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 import Error404 from "@/views/Error404";
 import Error403 from "@/views/Error403";
-import { findLast } from "lodash";
+import findLast from "lodash/findLast";
 import { check, isLogin } from "@/utils/auth";
 import { notification } from "ant-design-vue";
 
@@ -89,7 +89,7 @@ const routes = [
         path: "/form/step-form",
         name: "stepForm",
         hideChildrenInMenu: true,
-        meta: { title: "分布表单" },
+        meta: { title: "分步表单" },
         component: () =>
           import(
             /* webpackChunkName: "form" */ "../views/Forms/StepForm/index"

@@ -3,9 +3,24 @@
 </template>
 
 <script>
-import * as echarts from "echarts";
-import { debounce } from "lodash";
+import * as echarts from "echarts/core";
+import { BarChart } from "echarts/charts";
+import {
+  TitleComponent,
+  TooltipComponent,
+  GridComponent
+} from "echarts/components";
+import { CanvasRenderer } from "echarts/renderers";
+import debounce from "lodash/debounce";
 import { addListener, removeListener } from "resize-detector";
+
+echarts.use([
+  BarChart,
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  CanvasRenderer
+]);
 export default {
   name: "Chart",
   props: {

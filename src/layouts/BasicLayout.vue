@@ -9,7 +9,7 @@
         v-if="navLayout === 'left'"
       >
         <div class="logo">Ant Design Vue Pro</div>
-        <SideMenu :theme="navTheme" />
+        <SideMenu :theme="navTheme" :collapsed="collapsed" />
       </a-layout-sider>
       <a-layout>
         <a-layout-header style="background: #fff; padding: 0">
@@ -83,7 +83,7 @@ export default {
   overflow: hidden;
 }
 
-.nav-theme-dark ::v-deep .logo {
+.nav-theme-dark .logo {
   color: #fff;
 }
 </style>
